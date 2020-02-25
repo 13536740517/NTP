@@ -1,0 +1,406 @@
+﻿{
+  //********* head **********//
+  "ProductID": "生产型号",  //完整的生产型号 
+  "UserID": "用户ID",
+  "UserName": "用户名称",
+  "generalRemark": "加工指示信息",
+  "engineerRemark": "工程备注信息",
+  "processRequest": "加工难度要求",
+  //********* body **********//
+  "ENG_ProductLayout": {
+    "section": "ENGProductLayout",
+    "section_title": "拼版信息",
+    "ENGProductLayout": [
+      //最多传递4个元素  P1 ~ P4" 
+      {
+        //"ProductID": "产品型号", header中已经传递  此处不需要传递
+        "LayoutFor": "拼版方式 P1",
+        "PNLPerPCS": "1PNL包含多少PCS",
+        "PNLperSET": "1PNL包含多少SET",
+        "SETperPCS": "1SET包含多少PCS",
+        "SizeLength": "成品长",
+        "SizeWidth": "成品宽",
+        "PNLLength": "PNL开料长",
+        "PNLWidth": "PNL开料宽",
+        "ProPCSArea": "生产PCS毛面积",
+        "SalePCSArea": "出货PCS净面积",
+        "UserName": "操作人",
+        "PnlUseRate": "成品利用率",
+        "SheetLength": "大料长",
+        "SheetWidth": "大料宽"
+      },
+      {
+        //"ProductID": "产品型号",
+        "LayoutFor": "拼版方式  P2 .. P3,P4  //最多保存P1 ~ P4",
+        "PNLPerPCS": "1PNL包含多少PCS",
+        "PNLperSET": "1PNL包含多少SET",
+        "SETperPCS": "1SET包含多少PCS",
+        "SizeLength": "成品长",
+        "SizeWidth": "成品宽",
+        "PNLLength": "PNL开料长",
+        "PNLWidth": "PNL开料宽",
+        "ProPCSArea": "生产PCS毛面积",
+        "SalePCSArea": "出货PCS净面积",
+        "UserName": "操作人",
+        "PnlUseRate": "成品利用率",
+        "SheetLength": "大料长",
+        "SheetWidth": "大料宽"
+      } //........  P3 ~ P4
+    ]
+  },
+  "ENG_ProcessFlow": {
+    "section": "ENGProcessFlow",
+    "section_title": "工艺流程",
+    "ENGProcessFlow": [
+      {
+        //"ProductID": "产品型号",
+        "ProcessID": "工艺代码",
+        "Remark": "备注",
+        "DifficultFlag": "是否难点"
+      },
+      {
+        //"ProductID": "产品型号",
+        "ProcessID": "工艺代码",
+        "Remark": "备注",
+        "DifficultFlag": "是否难点"
+      } //........
+    ]
+  },
+  "ENG_ProcessGeneral": {
+    "section": "ENGProcessGeneral",
+    "section_title": "工艺参数",
+    "ENGProcessGeneral": [
+      {
+        "ParamID": "参数代码",
+        "ProductID": "产品型号",
+        "ProcessID": "工艺代码",
+        "ParamValue": "参数值",
+        "Writer": "用户名称", //因为编辑可能分多次不同用户编辑  所以这里要传名称与ID
+        "WirteUserID": "用户ID",
+        "FactoryID": "010.006" //这里直接传010.006 考虑其他分厂也可能使用 保留此参数进行传递
+      },
+      {
+        "ParamID": "参数代码",
+        "ProductID": "产品型号",
+        "ProcessID": "工艺代码",
+        "ParamValue": "参数值",
+        "Writer": "用户名称",
+        "WirteUserID": "用户ID",
+        "FactoryID": "010.006"
+      } //........
+    ]
+  },
+  "ENG_DrillInfo": {
+    "section": "ENGDrillInfoList",
+    "section_title": "钻孔信息集合",
+    "ENGDrillInfoList": [
+      {
+        "drillType": "钻孔工艺类型",
+        "ENGDrillInfo": [
+          {
+            "m_ToolNo": "刀序",
+            "m_DrillSize": "完成孔径",
+            "m_ToolKind": "孔类型",
+            "m_ToolSize": "钻咀",
+            "m_Tolerance": "公差",
+            "m_Pad": "焊盘",
+            "m_PcsDrillQty": "PCS孔数",
+            "m_SetDrillQty": "SET孔数",
+            "m_PcsGrooveLength": "PCS槽长",
+            "m_PnlDrillQty_A": "PNL孔数_A",
+            "m_PnlDrillQty_B": "PNL孔数_B",
+            "m_PnlDrillQty_C": "PNL孔数_C",
+            "m_PnlDrillQty_D": "PNL孔数_D",
+            "m_ToolType": "钻咀类型",
+            "m_PnlGrollveDrillNum": "PNL槽孔钻孔次数",
+            "m_DrillSizeEX": "扩孔钻针直径",
+            "m_Remark": "备注",
+            "m_Writer": "用户名称",
+            "m_WriteDate": "写入日期",
+            "m_LayoutFor": "拼板方式",
+            "m_PnlGrollveDrillNum_B": "PNL槽孔钻孔次数(B拼)"
+          },
+          {
+            "m_ToolNo": "刀序",
+            "m_DrillSize": "完成孔径",
+            "m_ToolKind": "孔类型",
+            "m_ToolSize": "钻咀",
+            "m_Tolerance": "公差",
+            "m_Pad": "焊盘",
+            "m_PcsDrillQty": "PCS孔数",
+            "m_SetDrillQty": "SET孔数",
+            "m_PcsGrooveLength": "PCS槽长",
+            "m_PnlDrillQty_A": "PNL孔数_A",
+            "m_PnlDrillQty_B": "PNL孔数_B",
+            "m_PnlDrillQty_C": "PNL孔数_C",
+            "m_PnlDrillQty_D": "PNL孔数_D",
+            "m_ToolType": "钻咀类型",
+            "m_PnlGrollveDrillNum": "PNL槽孔钻孔次数",
+            "m_DrillSizeEX": "扩孔钻针直径",
+            "m_Remark": "备注",
+            "m_Writer": "用户名称",
+            "m_WriteDate": "写入日期",
+            "m_LayoutFor": "拼板方式",
+            "m_PnlGrollveDrillNum_B": "PNL槽孔钻孔次数(B拼)"
+          } //........
+        ]
+      },
+      {
+        "drillType": "钻孔工艺类型",
+        "ENGDrillInfo": [
+          {
+            "m_ToolNo": "刀序",
+            "m_DrillSize": "完成孔径",
+            "m_ToolKind": "孔类型",
+            "m_ToolSize": "钻咀",
+            "m_Tolerance": "公差",
+            "m_Pad": "焊盘",
+            "m_PcsDrillQty": "PCS孔数",
+            "m_SetDrillQty": "SET孔数",
+            "m_PcsGrooveLength": "PCS槽长",
+            "m_PnlDrillQty_A": "PNL孔数_A",
+            "m_PnlDrillQty_B": "PNL孔数_B",
+            "m_PnlDrillQty_C": "PNL孔数_C",
+            "m_PnlDrillQty_D": "PNL孔数_D",
+            "m_ToolType": "钻咀类型",
+            "m_PnlGrollveDrillNum": "PNL槽孔钻孔次数",
+            "m_DrillSizeEX": "扩孔钻针直径",
+            "m_Remark": "备注",
+            "m_Writer": "用户名称",
+            "m_WriteDate": "写入日期",
+            "m_LayoutFor": "拼板方式",
+            "m_PnlGrollveDrillNum_B": "PNL槽孔钻孔次数(B拼)"
+          },
+          {
+            "m_ToolNo": "刀序",
+            "m_DrillSize": "完成孔径",
+            "m_ToolKind": "孔类型",
+            "m_ToolSize": "钻咀",
+            "m_Tolerance": "公差",
+            "m_Pad": "焊盘",
+            "m_PcsDrillQty": "PCS孔数",
+            "m_SetDrillQty": "SET孔数",
+            "m_PcsGrooveLength": "PCS槽长",
+            "m_PnlDrillQty_A": "PNL孔数_A",
+            "m_PnlDrillQty_B": "PNL孔数_B",
+            "m_PnlDrillQty_C": "PNL孔数_C",
+            "m_PnlDrillQty_D": "PNL孔数_D",
+            "m_ToolType": "钻咀类型",
+            "m_PnlGrollveDrillNum": "PNL槽孔钻孔次数",
+            "m_DrillSizeEX": "扩孔钻针直径",
+            "m_Remark": "备注",
+            "m_Writer": "用户名称",
+            "m_WriteDate": "写入日期",
+            "m_LayoutFor": "拼板方式",
+            "m_PnlGrollveDrillNum_B": "PNL槽孔钻孔次数(B拼)"
+          } //........
+        ]
+      } //.........
+    ]
+  },
+  "ENG_MillingInfo": {
+    "section": "ENGMillingInfoList",
+    "section_title": "锣刀信息集合",
+    "ENGMillingInfoList": [
+      {
+        "millingType": "锣刀工艺类型",
+        "ENGMillingInfo": [
+          {
+            "ProductID": "产品型号",
+            "ToolNo": "刀序",
+            "ToolSize": "锣刀尺寸",
+            "MillingLength": "锣程长度",
+            "IsSlot": "铣槽",
+            "Remark": "备注",
+            "Writer": "用户名称",
+            "WriteDate": "写入日期",
+            "FPCParamNo": "辅料代码",
+            "LayoutFor": "拼板方式"
+          },
+          {
+            "ProductID": "产品型号",
+            "ToolNo": "刀序",
+            "ToolSize": "锣刀尺寸",
+            "MillingLength": "锣程长度",
+            "IsSlot": "铣槽",
+            "Remark": "备注",
+            "Writer": "用户名称",
+            "WriteDate": "写入日期",
+            "FPCParamNo": "辅料代码",
+            "LayoutFor": "拼板方式"
+          } //........
+        ]
+      },
+      {
+        "millingType": "锣刀工艺类型",
+        "ENGMillingInfo": [
+          {
+            "ProductID": "产品型号",
+            "ToolNo": "刀序",
+            "ToolSize": "锣刀尺寸",
+            "MillingType": "锣刀类型",
+            "MillingLength": "锣程长度",
+            "IsSlot": "铣槽",
+            "Remark": "备注",
+            "Writer": "用户名称",
+            "WriteDate": "写入日期",
+            "FPCParamNo": "辅料代码",
+            "LayoutFor": "拼板方式"
+          },
+          {
+            "ProductID": "产品型号",
+            "ToolNo": "刀序",
+            "ToolSize": "锣刀尺寸",
+            "MillingType": "锣刀类型",
+            "MillingLength": "锣程长度",
+            "IsSlot": "铣槽",
+            "Remark": "备注",
+            "Writer": "用户名称",
+            "WriteDate": "写入日期",
+            "FPCParamNo": "辅料代码",
+            "LayoutFor": "拼板方式"
+          } //........
+        ]
+      } //.........
+    ]
+  },
+  "ENG_PressingStruct": {
+    "section": "ENGPressingStruct",
+    "section_title": "层压叠构",
+    "ENGPressingStruct": [
+      {
+        "Layer": "序号",
+        "MaterSpec": "剖面数据",
+        "Thinkness": "厚度(mm)",
+        "Tolerance": "公差(mm)",
+        "MaterNo": "物料编码",
+        "Remark": "备注",
+        "Memo": "厚度",
+        "Writer": "用户名称",
+        "WriteDate": "写入日期"
+      },
+      {
+        "Layer": "序号",
+        "MaterSpec": "剖面数据",
+        "Thinkness": "厚度(mm)",
+        "Tolerance": "公差(mm)",
+        "MaterNo": "物料编码",
+        "Remark": "备注",
+        "Memo": "厚度",
+        "Writer": "用户名称",
+        "WriteDate": "写入日期"
+      } //........
+    ]
+  },
+  "ENG_Impedance": {
+    "section": "ENGImpedance",
+    "section_title": "阻抗信息",
+    "ENGImpedance": [
+      {
+        "Layer": "层名",
+        "ImpeType": "阻抗类型",
+        "ImpeValueAndToler": "阻抗值及公差(OHM)",
+        "LineBottom": "线底",
+        "LineTop": "线面",
+        "LineSpace": "值",
+        "Thickness": "介质厚度",
+        "CopperThickness": "导线铜厚",
+        "GreenThickness": "线面绿油厚度",
+        "EtchingThickness": "蚀刻后阻抗控制值(OHM)",
+        "RefLayer": "参考层",
+        "Remark": "备注",
+        "Writer": "用户名称"
+      },
+      {
+        "Layer": "层名",
+        "ImpeType": "阻抗类型",
+        "ImpeValueAndToler": "阻抗值及公差(OHM)",
+        "LineBottom": "线底",
+        "LineTop": "线面",
+        "LineSpace": "值",
+        "Thickness": "介质厚度",
+        "CopperThickness": "导线铜厚",
+        "GreenThickness": "线面绿油厚度",
+        "EtchingThickness": "蚀刻后阻抗控制值(OHM)",
+        "RefLayer": "参考层",
+        "Remark": "备注",
+        "Writer": "用户名称"
+      } //........
+    ]
+  },
+  "ENG_ProductInfo": {
+    //注：UI->BOM清单页 深圳工程未使用该功能  此功能是由其他分厂提出申请补充的 深圳工程可不传
+    "section": "BOMProductInfo",
+    "section_title": "BOM",
+    "BOMProductInfo": [
+      {
+        "ProductID": "生产型号",
+        "MProductID": "母板型号",
+        "BOMID": "BOM编码",
+        "ProcessID": "工艺代码",
+        "MaterialNo": "物料编码",
+        "UseQty": "用量",
+        "Unit": "单位",
+        "ShadowMaterial": "替代料",
+        "Remark": "备注",
+        "Keyin": "用户名称",
+        "KeyinTime": "录入时间"
+      },
+      {
+        "ProductID": "生产型号",
+        "MProductID": "母板型号",
+        "BOMID": "BOM编码",
+        "ProcessID": "工艺代码",
+        "MaterialNo": "物料编码",
+        "UseQty": "用量",
+        "Unit": "单位",
+        "ShadowMaterial": "替代料",
+        "Remark": "备注",
+        "Keyin": "用户名称",
+        "KeyinTime": "录入时间"
+      } //........
+    ]
+  },
+  "ENG_FuTu": {
+    "section": "ENGFuTu",
+    "section_title": "附图",
+    "ENGFuTu": [
+      {
+        "futu": "F02E029518A0/1_20171028181255328.png" //生产型号+图片全名
+      },
+      {
+        "futu": "F02E029518A0/pb-1_20190330170216576.png"
+      } //........
+    ]
+  },
+  /******  以下的数据只有外层型号才需要保存 ******/
+  "ENG_PINCut": {
+    "section": "ENGPINCut",
+    "section_title": "开料信息及开料图",
+    "ENGPINCut": {
+      "ProductID": "生产型号",
+      "MProductID": "母板型号",
+      "BOMID": "BOM编码",
+      "ProcessID": "工艺代码",
+      "MaterialNo": "物料编码",
+      "UseQty": "用量",
+      "Unit": "单位",
+      "ShadowMaterial": "替代料",
+      "Remark": "备注",
+      "Keyin": "用户名称",
+      "KeyinTime": "录入时间"
+    }
+  },
+  "ENG_PINCutEntry": {
+    "section": "PINCutEntry",
+    "section_title": "开料信息及开料图",
+    "PINCutEntry": [
+      {
+        "futu": "F02E029518A0/1_20171028181255328.png" //生产型号+图片全名
+      },
+      {
+        "futu": "F02E029518A0/pb-1_20190330170216576.png"
+      } //........
+    ]
+  }
+}
